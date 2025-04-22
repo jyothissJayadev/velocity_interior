@@ -3,6 +3,8 @@ import HeroSection from "@/components/sections/howPage/HeroSection"; // Assuming
 import PageShell from "@/components/layout/PageShell"; // Ensure PageShell handles NavContext logic
 import OneBreakdown from "@/components/sections/howPage/OneBreakdown";
 import CTA from "@/components/layout/CTA";
+import StepSection from "@/components/sections/howPage/StepSection";
+import DesignIntro from "@/components/sections/howPage/DesignIntro";
 
 const navSections = [
   { name: "PROCESS", path: "how" },
@@ -16,6 +18,11 @@ const How = () => {
       <main className="">
         <HeroSection />
         <OneBreakdown />
+        <StepSection step="01" the="Foundation" />
+        <StepSection step="02" the="Foundation" />
+        <StepSection step="03" the="Foundation" />
+        <StepSection step="04" the="Foundation" />
+        <DesignIntro />
         <CTA />
       </main>
     </PageShell>

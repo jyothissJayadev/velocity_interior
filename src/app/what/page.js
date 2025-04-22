@@ -11,7 +11,6 @@ const What = () => {
     <PageShell navSections={navSections}>
       <div>
         <HeroSection />
-        {/* You can add more content for the "What" page here */}
       </div>
     </PageShell>
   );

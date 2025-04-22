@@ -88,7 +88,7 @@ export default function NavBox({ sections = [], hidden = false }) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
-                className="bg-[#0a0e23]/90 backdrop-blur-md rounded-lg p-3 w-24 shadow-lg overflow-visible border border-[#1e2a55]/40"
+                className="bg-black/40 backdrop-blur-sm rounded-lg p-3 w-24 shadow-lg overflow-visible border border-neutral-700"
               >
                 <ul className="space-y-2">
                   {sections.map((section, index) => (
@@ -105,8 +105,8 @@ export default function NavBox({ sections = [], hidden = false }) {
                         onClick={() => handleNavClick(section.path)}
                         className={`w-full text-center font-medium py-2 rounded-md transition-all duration-300 ${
                           isActive(index)
-                            ? "text-blue-200 bg-[#1e2a55] shadow-md"
-                            : "text-blue-500/70 hover:bg-[#1e2a55]/50"
+                            ? "text-white bg-neutral-900/90 shadow-md"
+                            : "text-neutral-300 hover:bg-neutral-800/50"
                         }`}
                       >
                         {section.name}
@@ -123,7 +123,7 @@ export default function NavBox({ sections = [], hidden = false }) {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="bg-[#0a0e23]/90 backdrop-blur-md rounded-full px-3 py-1 shadow-sm border border-[#1e2a55]/40"
+                className="bg-black/30 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm border border-neutral-700"
               >
                 <ul className="flex space-x-2 px-2">
                   {sections.map((section, index) => (
@@ -132,16 +132,16 @@ export default function NavBox({ sections = [], hidden = false }) {
                         onClick={() => handleNavClick(section.path)}
                         className={`flex items-center justify-center rounded-full w-4 h-4 transition-all duration-300 ${
                           isActive(index)
-                            ? "bg-[#1e2a55] shadow-sm"
-                            : "bg-[#1e2a55]/40"
+                            ? "bg-white shadow-sm"
+                            : "bg-neutral-600"
                         }`}
                         aria-label={section.name}
                       ></button>
                       <span
                         className={`text-xxs mt-0.5 block text-center ${
                           isActive(index)
-                            ? "text-blue-200 font-semibold"
-                            : "text-blue-500"
+                            ? "text-white font-semibold"
+                            : "text-neutral-300"
                         }`}
                         style={{ fontSize: "6px" }}
                       >
